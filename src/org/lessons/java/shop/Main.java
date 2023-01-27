@@ -34,8 +34,9 @@ public class Main {
 		System.out.println(scorte[0].prezzo);
 		System.out.println(scorte[0].iva);
 		
-		System.out.println(scorte[0].aggiungereIva(scorte[0].prezzo, scorte[0].iva));
-		System.out.println(scorte[0].dammiNomeEsteso(scorte[0].nome, scorte[0].codice));
+		System.out.println(scorte[0].getPrezzoBase());
+		System.out.println(scorte[0].getPrezzoConIva());
+		System.out.println(scorte[0].getNomeEsteso());
 		
 		
 		

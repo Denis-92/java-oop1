@@ -19,17 +19,15 @@ public class Prodotto {
 		this.iva = iva;
 	}
 	
-	float aggiungereIva(float prezzoBase, int aliquota) {
-		float prezzoTotale = prezzoBase * (aliquota + 100) / 100F;
-		return prezzoTotale;
+	float getPrezzoBase() {
+		return prezzo;
 	}
 	
-	float togliereIva(float prezzoTassato, int aliquotaApplicata) {
-		float prezzoBase = (100F * prezzoTassato) / (100F + aliquotaApplicata);
-		return prezzoBase;
+	float getPrezzoConIva() {
+		return prezzo * (iva + 100) / 100F;
 	}
 	
-	String dammiNomeEsteso(String nome, int codice) {
+	String getNomeEsteso() {
 		String nomeEsteso = codice+"-"+nome;
 		return nomeEsteso;
 	}
