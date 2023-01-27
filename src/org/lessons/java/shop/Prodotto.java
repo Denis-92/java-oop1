@@ -1,26 +1,34 @@
 package org.lessons.java.shop;
 
+import java.util.Random;
+
 public class Prodotto {
-
-	public static void main(String[] args) {
-		
-		// Creare la classe Prodotto che gestisce i prodotti dello shop.
-		// Un prodotto è caratterizzato da:
-		//		- codice (numero intero)
-		//		- nome
-		//		- descrizione
-		//		- prezzo
-		//		- iva
-		// Usate opportunamente i costruttori ed eventuali altri metodi di “utilità” per fare in modo che:
-		//		alla creazione di un nuovo prodotto il codice sia valorizzato con un numero random
-		//		Il prodotto esponga sia un metodo per avere il prezzo base che uno per avere il prezzo comprensivo di iva
-		//		Il prodotto esponga un metodo per avere il nome esteso, ottenuto concatenando codice-nome
-		//	Nello stesso package aggiungete una classe Main con metodo main
-		//		nella quale testate tutte le funzionalità della classe Prodotto
-		
-		//	BONUS: create un metodo che restituisca il codice con un pad left di 0 per arrivare a 8 caratteri
-		//		(ad esempio codice 91 diventa 00000091, mentre codice 123445567 resta come è)
-
+	
+	int codice;
+	String nome;
+	String descrizione;
+	float prezzo;
+	int iva;
+	
+	public Prodotto() {
+		super();
+		Random makeRandom = new Random();
+		codice = makeRandom.nextInt() & Integer.MAX_VALUE;
+	}
+	
+	float aggiungereIva(float prezzoBase, int aliquota) {
+		float prezzoTotale = prezzoBase * aliquota / 100F;
+		return prezzoTotale;
+	}
+	
+	float togliereIva(float prezzoTassato, int aliquotaApplicata) {
+		float prezzoBase = (100F * prezzoTassato) / (100F + aliquotaApplicata);
+		return prezzoBase;
+	}
+	
+	String dammiNomeEsteso(String nome, int codice) {
+		String nomeEsteso = codice+"-nome";
+		return nomeEsteso;
 	}
 
 }
