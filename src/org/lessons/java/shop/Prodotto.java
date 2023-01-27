@@ -10,10 +10,11 @@ public class Prodotto {
 	float prezzo;
 	int iva;
 	
-	public Prodotto(float prezzo, int iva) {
+	public Prodotto(String nome, float prezzo, int iva) {
 		super();
 		Random makeRandom = new Random();
 		codice = makeRandom.nextInt() & Integer.MAX_VALUE;
+		this.nome = nome;
 		this.prezzo = prezzo;
 		this.iva = iva;
 	}

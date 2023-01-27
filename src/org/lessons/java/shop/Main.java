@@ -25,15 +25,19 @@ public class Main {
 			
 		Prodotto [] scorte = new Prodotto[1];
 		for (int i = 0; i < scorte.length; i++) {
-			Prodotto prodotto = new Prodotto(100F, 21);
+			Prodotto prodotto = new Prodotto("Fiat Panda", 100F, 21);
 			scorte[i] = prodotto;
 		}
 		
 		System.out.println(scorte[0].codice);
+		System.out.println(scorte[0].nome);
 		System.out.println(scorte[0].prezzo);
 		System.out.println(scorte[0].iva);
 		
 		System.out.println(scorte[0].aggiungereIva(scorte[0].prezzo, scorte[0].iva));
+		System.out.println(scorte[0].dammiNomeEsteso(scorte[0].nome, scorte[0].codice));
+		
+		
 		
 		// Aperto inputContainer
 //		Scanner inputContainer = new Scanner(System.in);
