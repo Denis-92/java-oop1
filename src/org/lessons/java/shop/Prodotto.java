@@ -10,14 +10,16 @@ public class Prodotto {
 	float prezzo;
 	int iva;
 	
-	public Prodotto() {
+	public Prodotto(float prezzo, int iva) {
 		super();
 		Random makeRandom = new Random();
 		codice = makeRandom.nextInt() & Integer.MAX_VALUE;
+		this.prezzo = prezzo;
+		this.iva = iva;
 	}
 	
 	float aggiungereIva(float prezzoBase, int aliquota) {
-		float prezzoTotale = prezzoBase * aliquota / 100F;
+		float prezzoTotale = prezzoBase * (aliquota + 100) / 100F;
 		return prezzoTotale;
 	}
 	
