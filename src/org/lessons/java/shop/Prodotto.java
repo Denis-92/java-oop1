@@ -30,7 +30,7 @@ public class Prodotto {
 	}
 	
 	String dammiNomeEsteso(String nome, int codice) {
-		String nomeEsteso = codice+"-nome";
+		String nomeEsteso = codice+"-"+nome;
 		return nomeEsteso;
 	}
 
