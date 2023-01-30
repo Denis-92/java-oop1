@@ -41,5 +41,17 @@ public class Conto {
 		return true;
 	}
 	
+	public int getNumeroConto() {
+		return numeroConto;
+	}
+	
+	public String getNomeProprietario() {
+		return nomeProprietario;
+	}
+	
+	public float getSaldo() {
+		return saldo;
+	}
+	
 
 }
