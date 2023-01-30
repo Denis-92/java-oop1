@@ -1,6 +1,6 @@
 package org.lessons.java.shop;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class Main {
 
@@ -24,19 +24,20 @@ public class Main {
 		//		(ad esempio codice 91 diventa 00000091, mentre codice 123445567 resta come è)
 			
 		Prodotto [] scorte = new Prodotto[1];
-		Prodotto prodotto = new Prodotto("Fiat Panda", 100F, 21);
+		Prodotto prodotto = new Prodotto("Fiat Panda", 100.43F, 21);
 		scorte[0] = prodotto;
 		
-		System.out.println(scorte[0].codice);
-		System.out.println(scorte[0].nome);
-		System.out.println(scorte[0].prezzo);
-		System.out.println(scorte[0].iva);
+		System.out.println("Il codice è: " + scorte[0].codice);
+		System.out.println("Il nome è: " + scorte[0].nome);
+		System.out.println("Il prezzo è: " + scorte[0].prezzo + "€");
+		System.out.println("L'IVA è: " + scorte[0].iva + "%");
 		
-		System.out.println(scorte[0].getPrezzoBase());
-		System.out.println(scorte[0].getPrezzoConIva());
-		System.out.println(scorte[0].getNomeEsteso());
+		System.out.println("Test funzione - get prezzo base: " + scorte[0].getPrezzoBase());
+		System.out.println("Test funzione - get prezzo con IVA: " + scorte[0].getPrezzoConIva());
+		System.out.println("Test funzione - get nome esteso separato con trattino: " + scorte[0].getNomeEsteso());
 		
-		
+		System.out.println("Test funzione - formatta numero con pad left, aggiunge 0 fino ad arrivare a numero di 8 cifre: " +
+		scorte[0].formattaPadLeftCodice());
 		
 		// Aperto inputContainer
 //		Scanner inputContainer = new Scanner(System.in);

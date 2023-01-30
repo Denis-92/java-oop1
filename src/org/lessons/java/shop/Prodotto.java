@@ -13,7 +13,7 @@ public class Prodotto {
 	public Prodotto(String nome, float prezzo, int iva) {
 		super();
 		Random makeRandom = new Random();
-		codice = makeRandom.nextInt() & Integer.MAX_VALUE;
+		codice = makeRandom.nextInt(19999999);
 		this.nome = nome;
 		this.prezzo = prezzo;
 		this.iva = iva;
@@ -30,6 +30,11 @@ public class Prodotto {
 	String getNomeEsteso() {
 		String nomeEsteso = codice+"-"+nome;
 		return nomeEsteso;
+	}
+	
+	String formattaPadLeftCodice() {
+		String codiceFormattato = String.format("%08d", this.codice);
+		return codiceFormattato;
 	}
 
 }
