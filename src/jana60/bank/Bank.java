@@ -38,6 +38,7 @@ public class Bank {
 				System.out.println("Errore! Valore inserito non corretto!");
 				System.out.print("Scegliere: 1 per Versamento - 2 per Prelievo - 3 per Terminare: ");
 				scelta = receiveInput.nextInt();
+				termina = scelta == 3;
 			}
 			if (versamento) {
 				System.out.print("Quanto vuoi versare sul conto? ");
@@ -45,6 +46,7 @@ public class Bank {
 				contoCorrente.versamento(importoVersato);
 				System.out.print("Scegliere: 1 per Versamento - 2 per Prelievo - 3 per Terminare: ");
 				scelta = receiveInput.nextInt();
+				versamento = scelta == 1;
 			}
 			if (prelievo) {
 				System.out.print("Quanto vuoi prelevare dal conto? ");
@@ -52,6 +54,7 @@ public class Bank {
 				contoCorrente.prelievo(importoRichiesto);
 				System.out.print("Scegliere: 1 per Versamento - 2 per Prelievo - 3 per Terminare: ");
 				scelta = receiveInput.nextInt();
+				prelievo = scelta == 2;
 			}
 		}
 		
