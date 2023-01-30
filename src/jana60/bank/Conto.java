@@ -29,9 +29,10 @@ public class Conto {
 	String nomeProprietario;
 	float saldo;
 	
-	public Conto() {
-		super();
+	public Conto(String nomeIntestatario) {
 		saldo = 0;
+		nomeProprietario = nomeIntestatario;
+		numeroConto = 123;
 	}
 	
 	public float versamento(float importo) {
