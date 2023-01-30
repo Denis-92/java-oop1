@@ -30,10 +30,9 @@ public class Conto {
 		saldo = 0;
 	}
 	
-//	void prelievo ( ) {
-//		
-//	}
-	
+	public float versamento(float importo) {
+		return saldo += importo;
+	}
 	
 
 }
