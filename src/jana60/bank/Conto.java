@@ -34,5 +34,12 @@ public class Conto {
 		return saldo += importo;
 	}
 	
+	public boolean prelievo (float importo) {
+		boolean disponibilità = importo >= this.saldo;
+		if (disponibilità) return false;
+		else this.saldo -= importo;
+		return true;
+	}
+	
 
 }
