@@ -3,6 +3,7 @@ package jana60.bank;
 import java.util.Scanner;
 
 public class Bank {
+	
 	public static void main(String[] args) {
 		
 		String nomeProprietario;
@@ -39,6 +40,8 @@ public class Bank {
 				System.out.println("Errore! Valore inserito non corretto!");
 				System.out.print("Scegliere: 1 per Versamento - 2 per Prelievo - 3 per Terminare: ");
 				scelta = receiveInput.nextInt();
+				versamento = scelta == 1;
+				prelievo = scelta == 2;
 				termina = scelta == 3;
 			}
 			if (versamento) {
