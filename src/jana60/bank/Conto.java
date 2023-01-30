@@ -1,6 +1,7 @@
 package jana60.bank;
 
 import java.text.DecimalFormat;
+import java.util.Random;
 
 public class Conto {
 
@@ -24,6 +25,7 @@ public class Conto {
 	// Il menu continua ad apparire fino a che l’utente sceglie di uscire.
 	
 	private static final DecimalFormat formatta = new DecimalFormat("0.00");
+	Random makeRandom = new Random();
 	
 	int numeroConto;
 	String nomeProprietario;
@@ -32,7 +34,7 @@ public class Conto {
 	public Conto(String nomeIntestatario) {
 		saldo = 0;
 		nomeProprietario = nomeIntestatario;
-		numeroConto = 123;
+		numeroConto = makeRandom.nextInt(1000)+1;
 	}
 	
 	public float versamento(float importo) {
