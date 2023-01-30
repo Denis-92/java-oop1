@@ -24,10 +24,8 @@ public class Main {
 		//		(ad esempio codice 91 diventa 00000091, mentre codice 123445567 resta come è)
 			
 		Prodotto [] scorte = new Prodotto[1];
-		for (int i = 0; i < scorte.length; i++) {
-			Prodotto prodotto = new Prodotto("Fiat Panda", 100F, 21);
-			scorte[i] = prodotto;
-		}
+		Prodotto prodotto = new Prodotto("Fiat Panda", 100F, 21);
+		scorte[0] = prodotto;
 		
 		System.out.println(scorte[0].codice);
 		System.out.println(scorte[0].nome);
