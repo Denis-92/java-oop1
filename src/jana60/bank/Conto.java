@@ -42,7 +42,7 @@ public class Conto {
 	}
 	
 	public boolean prelievo (float importo) {
-		boolean disponibilità = importo >= this.saldo;
+		boolean disponibilità = importo > this.saldo;
 		if (disponibilità) return false;
 		else this.saldo -= importo;
 		return true;
