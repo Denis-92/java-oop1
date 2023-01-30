@@ -1,5 +1,7 @@
 package jana60.bank;
 
+import java.text.DecimalFormat;
+
 public class Conto {
 
 	// Creare la classe Conto caratterizzata da:
@@ -20,6 +22,8 @@ public class Conto {
 	// Se l’operazione non è valida mostriamo un messaggio di errore.
 	// Se l’operazione va a buon fine mostriamo il saldo attuale del conto.
 	// Il menu continua ad apparire fino a che l’utente sceglie di uscire.
+	
+	private static final DecimalFormat formatta = new DecimalFormat("0.00");
 	
 	int numeroConto;
 	String nomeProprietario;
@@ -49,8 +53,13 @@ public class Conto {
 		return nomeProprietario;
 	}
 	
-	public float getSaldo() {
-		return saldo;
+	public String getSaldo() {
+		return formattaImporto(saldo);
+	}
+	
+	public String formattaImporto (float saldo) {
+		String importoFormattato = formatta.format(saldo);
+		return importoFormattato;
 	}
 	
 
